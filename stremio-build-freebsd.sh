@@ -11,6 +11,7 @@ wget $(cat server-url.txt) -O server.js
 qmake-qt5
 cmake -B build -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=""
 cmake --build build --parallel $(sysctl -n hw.ncpu)
+mkdir -p /usr/local/share/stremio
 cp -R build/* /usr/local/share/stremio/
 cp server.js /usr/local/share/stremio/
 ln -sf /usr/local/bin/node /usr/local/share/stremio/node
