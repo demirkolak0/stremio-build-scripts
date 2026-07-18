@@ -19,7 +19,7 @@ cp -R build/* /opt/stremio
 cp server.js /opt/stremio
 ln -sf /usr/bin/node /opt/stremio/node
 mkdir -p ~/.local/share/applications
-fetch -o /opt/stremio/stremio-logo.svg https://raw.githubusercontent.com/Stremio/stremio-brand/master/logos/SVG/stremio-logo-icon-only-fullcolor.svg
+wget -O /opt/stremio/stremio-logo.svg https://raw.githubusercontent.com/Stremio/stremio-brand/master/logos/SVG/stremio-logo-icon-only-fullcolor.svg
 cat << 'EOF' > /usr/share/applications/Stremio.desktop
 [Desktop Entry]
 Version=1.0
