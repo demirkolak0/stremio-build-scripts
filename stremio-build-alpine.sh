@@ -4,7 +4,9 @@ if [ "$(id -u)" -ne 0 ]; then
     echo "ERROR: This script must be run as root..." >&2
     exit 1
 fi
-apk update && apk upgrade
+apk update
+apk upgrade
+echo "Note that qt5-qtwebengine-dev and some packages wants testing and edge binaries and libraries. I tried to built it with normal release repos but I encountered with dependency hell. So I just used testing and edge repos."
 apk add make pkgconf gcc g++ git nodejs mpv mpv-libs mpv-dev qt5-qtbase-dev qt5-qtdeclarative-dev qt5-qtwebengine-dev qt5-qtwebchannel-dev qt5-qtquickcontrols qt5-qtquickcontrols2 cmake wget
 git clone --recurse-submodules https://github.com/stremio/stremio-shell
 cd stremio-shell
