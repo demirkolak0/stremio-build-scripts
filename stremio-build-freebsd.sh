@@ -21,9 +21,8 @@ cd /usr/local/share/stremio
 exec ./stremio "$@"
 EOF
 chmod +x /usr/local/bin/stremio
-mkdir -p ~/.local/share/applications
-fetch -o /usr/local/share/stremio/stremio-logo.svg https://raw.githubusercontent.com/Stremio/stremio-brand/master/logos/SVG/stremio-logo-icon-only-fullcolor.svg
 mkdir -p ~/.local/share/applications/
+fetch -o /usr/local/share/stremio/stremio-logo.svg https://raw.githubusercontent.com/Stremio/stremio-brand/master/logos/SVG/stremio-logo-icon-only-fullcolor.svg
 cat << 'EOF' > ~/.local/share/applications/stremio.desktop
 [Desktop Entry]
 Version=1.0
