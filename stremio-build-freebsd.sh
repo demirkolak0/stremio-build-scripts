@@ -23,7 +23,8 @@ EOF
 chmod +x /usr/local/bin/stremio
 mkdir -p ~/.local/share/applications/
 fetch -o /usr/local/share/stremio/stremio-logo.svg https://raw.githubusercontent.com/Stremio/stremio-brand/master/logos/SVG/stremio-logo-icon-only-fullcolor.svg
-cat << 'EOF' > ~/.local/share/applications/stremio.desktop
+mkdir -p /usr/local/share/applications/
+cat << 'EOF' > /usr/local/share/applications/stremio.desktop
 [Desktop Entry]
 Version=1.0
 Type=Application
@@ -35,3 +36,4 @@ Exec=/usr/local/bin/stremio
 Terminal=false
 Categories=AudioVideo;Video;Player;
 EOF
+chmod 644 /usr/local/share/applications/stremio.desktop
